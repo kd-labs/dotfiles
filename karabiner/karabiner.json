@@ -1,0 +1,46 @@
+{
+  "profiles": [
+    {
+      "name": "Default profile",
+      "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
+      "complex_modifications": {
+        "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
+        "rules": [
+          {
+            "description": "Caps_lock to escape if alone, left control if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "caps_lock" },
+                "to": [{ "key_code": "left_control", "lazy": true }],
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    },
+    {
+      "name": "Xperimental",
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" },
+      "complex_modifications": {
+        "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
+        "rules": [
+          {
+            "description": "Caps_lock to escape if alone, left control if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "caps_lock" },
+                "to": [{ "key_code": "left_control" }],
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

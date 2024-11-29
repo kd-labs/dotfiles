@@ -1,29 +1,123 @@
 {
-  "profiles": [
-    {
-      "name": "Default profile",
-      "selected": true,
-      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
-    },
-    {
-      "name": "Xperimental",
-      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" },
-      "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
-      "complex_modifications": {
-        "rules": [
-          {
-            "description": "Caps_lock to escape if alone, left control if pressed with another key",
-            "manipulators": [
-              {
-                "from": { "key_code": "caps_lock" },
-                "to": [{ "key_code": "left_control" }],
-                "to_if_alone": [{ "key_code": "escape" }],
-                "type": "basic"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+    "profiles": [
+        {
+            "name": "Default profile",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Caps_lock to escape if alone, left control if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "caps_lock" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "j to j if alone, left control if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "j" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "j" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "k to k if alone, right_command if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "k" },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "k" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "Xperimental",
+            "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Caps_lock to escape if alone, left control if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "caps_lock" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "j to j if alone, left control if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "j" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "j" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "k to k if alone, right_command if pressed with another key",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "k" },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "k" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "name": "Pro",
+            "parameters": { "basic.to_if_alone_timeout_milliseconds": 250 },
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
 }

@@ -70,6 +70,22 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "; to ; if alone, right_option if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "semicolon" },
+                "to": [
+                  {
+                    "key_code": "right_option",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "semicolon" }],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
@@ -142,6 +158,22 @@
                   }
                 ],
                 "to_if_alone": [{ "key_code": "l" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "; to ; if alone, right_option if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "semicolon" },
+                "to": [
+                  {
+                    "key_code": "right_option",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "semicolon" }],
                 "type": "basic"
               }
             ]

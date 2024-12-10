@@ -181,7 +181,7 @@
         ]
       },
       "name": "Pro",
-      "parameters": { "basic.to_if_alone_timeout_milliseconds": 100 },
+      "parameters": { "basic.to_if_alone_timeout_milliseconds": 50 },
       "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }

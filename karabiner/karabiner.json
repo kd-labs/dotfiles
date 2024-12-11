@@ -177,11 +177,75 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "a to a if alone, left_option if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "a" },
+                "to": [
+                  {
+                    "key_code": "left_option",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "a" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "s to s if alone, left_shift if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "s" },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "s" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "d to d if alone, left_command if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "d" },
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "d" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "f to f if alone, left_control if pressed with another key",
+            "manipulators": [
+              {
+                "from": { "key_code": "f" },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "f" }],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
       "name": "Pro",
-      "parameters": { "basic.to_if_alone_timeout_milliseconds": 50 },
+      "parameters": { "basic.to_if_alone_timeout_milliseconds": 30 },
       "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }

@@ -6,7 +6,9 @@
   process-unmapped-keys yes
 )
 (defsrc
+  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
   a   s   d   f   j   k   l   ;
+  fn
 )
 (defvar
   ;; Note: consider using different time values for your different fingers.
@@ -24,7 +26,17 @@
   k-cmd (tap-hold $tap-time $hold-time k rmet)
   l-sft (tap-hold $tap-time $hold-time l rsft)
   ;-opt (tap-hold $tap-time $hold-time ; ralt)
+  fn-media (layer-while-held media)
 )
+
 (deflayer base
+  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
   @a-opt  @s-sft  @d-cmd  @f-ctl  @j-ctl  @k-cmd  @l-sft  @;-opt
+  @fn-media
+)
+
+(deflayer media
+  brup brdn _ _ _ _ prev pp next mute vold volu
+  a   s   d   f   j   k   l   ;
+  _
 )

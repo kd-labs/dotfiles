@@ -36,7 +36,7 @@
 )
 
 (deflayer media
-  brup brdn _ _ _ _ prev pp next mute vold volu
+  brdn brup _ _ _ _ prev pp next mute vold volu
   a   s   d   f   j   k   l   ;
   _
 )

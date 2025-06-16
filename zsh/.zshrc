@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls='ls -ltrha'
+alias lg='lazygit'
 
 export GOPATH="/Users/kunal.das/KD/go-workspace"
 export PATH=$(go env GOPATH)/bin:$PATH

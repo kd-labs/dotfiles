@@ -26,7 +26,7 @@
   k-cmd (tap-hold $tap-time $hold-time k rmet)
   l-sft (tap-hold $tap-time $hold-time l rsft)
   ;-opt (tap-hold $tap-time $hold-time ; ralt)
-  caps-nav (tap-hold $tap-time $hold-time caps (layer-while-held nav))
+  caps-nav (tap-hold $tap-time $hold-time esc (layer-while-held nav))
   fn-media (layer-while-held media)
 )
 
